@@ -1,0 +1,37 @@
+--CREATING A TABLE FOR DEMO
+CREATE TABLE dbo.TB_EXAMPLE (
+  ID_EXAMPLE int NOT NULL IDENTITY( 1,1 ),
+  NM_EXAMPLE varchar( 25) NOT NULL,
+  DT_CREATE datetime NULL DEFAULT (GETDATE())
+);
+GO
+-- INSERTING 1,000,000 DIFFERENT ROWS IN THE TABLE
+INSERT INTO TB_EXAMPLE ( NM_EXAMPLE) VALUES ('Paging Item ' + CONVERT(VARCHAR ,ISNULL( @@IDENTITY, 0 )))
+GO 100000
+
+
+
+--QUERY USING "ROW_NUMBER" 
+DECLARE @PageNumber AS INT, @RowspPage AS INT
+SET @PageNumber = 2
+SET @RowspPage = 10 
+SELECT * FROM (
+             SELECT ROW_NUMBER() OVER(ORDER BY ID_EXAMPLE) AS Number,
+                    ID_EXAMPLE, NM_EXAMPLE , DT_CREATE FROM TB_EXAMPLE
+               ) AS TBL
+WHERE Numero BETWEEN ((@PageNumber - 1) * @RowspPage + 1) AND (@PageNumber * @RowspPage)
+ORDER BY ID_EXAMPLE
+GO
+
+-- QUERY USING "OFFSET" AND "FETCH NEXT" (SQL SERVER 2012)
+DECLARE @PageNumber AS INT, @RowspPage AS INT
+SET @PageNumber = 2
+SET @RowspPage = 10
+SELECT ID_EXAMPLE, NM_EXAMPLE, DT_CREATE
+FROM TB_EXAMPLE
+ORDER BY ID_EXAMPLE
+OFFSET ((@PageNumber - 1) * @RowspPage) ROWS
+FETCH NEXT @RowspPage ROWS ONLY
+GO
+
+--https://social.technet.microsoft.com/wiki/contents/articles/23811.paging-a-query-with-sql-server.aspx
