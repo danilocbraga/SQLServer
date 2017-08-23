@@ -1,5 +1,4 @@
-/* Define how close we are to the value limit
-   before we start throwing up the red flag.
+/* Define how close we are to the value limit  before we start throwing up the red flag.
    The higher the value, the closer to the limit. */
 Declare @threshold decimal(3,2) = .85;
  
@@ -30,8 +29,8 @@ WHILE @@ROWCOUNT = 1
 BEGIN
       SET @cmd = '
       Insert Into #identityStatus
-    Select ''' + @DB + ''' As [database_name]
-        , Object_Name(id.object_id, DB_ID(''?'')) As [table_name]
+      Select ''' + @DB + ''' As [database_name]
+        , Object_Name(id.object_id, DB_ID(''' + @DB +''')) As [table_name]
         , id.name As [column_name]
         , t.name As [data_type]
         , Cast(id.last_value As bigint) As [last_value]
@@ -74,6 +73,7 @@ Select database_name
         Else 'okay'
         End As [id_status]
 From #identityStatus
+
 Order By percentLeft;
  
 /* Clean up after ourselves */
