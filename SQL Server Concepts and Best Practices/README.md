@@ -33,7 +33,14 @@ Temp Tables...
 As far as when to use each, they have very different use cases. If you will have a very large result set, or need to refer to it more than once, put it in a #temp table. If it needs to be recursive, is disposable, or is just to simplify something logically, a CTE is preferred.
 Also, a CTE should never be used for performance. You will almost never speed things up by using a CTE, because, again, it's just a disposable view. You can do some neat things with them but speeding up a query isn't really one of them.
 
+**When to use char/varchar/nchar/nvarchar? **
+----------
+•	**nchar** and **nvarchar** can store **Unicode** characters.
+	**char** and **varchar** cannot store **Unicode** characters.
+•	**char** and **nchar** are **fixed-length** which will **reserve storage** space for number of characters you specify even if you don't use up all that space.
+•	**varchar** and **nvarchar** are **variable-length** which will only use up spaces for the characters you store. It **will not reserve storage like  char  or  nchar**. nchar and nvarchar will take up twice as much storage space, so it may be wise to use them only if you need Unicode support.
 
+It is worth highlighting the importance to keep your code (variables) using the same data type definition as the column definition. Mismatch data types will probably result in Non-Sargable queries.
 
 **Using AS instead of = for column aliases**
 ----------
