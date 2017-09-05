@@ -42,7 +42,12 @@ Also, a CTE should never be used for performance. You will almost never speed th
 
 It is worth highlighting the importance to keep your code (variables) using the same data type definition as the column definition. Mismatch data types will probably result in Non-Sargable queries.
 
-**Using AS instead of = for column aliases**
+**Using the same column name in different tables but with different data types**
+----------
+
+Probably anybody will assume that columns with the same name in different tables have the same data type. As a result, they won’t verify data types. Different types is an accident waiting to happen.
+
+**Use =instead of AS for column aliases**
 ----------
 
 There is no performance difference between both of them. But, which is easier to ready? 
