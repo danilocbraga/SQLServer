@@ -65,7 +65,25 @@ WHERE O.name IN (select table_name from information_schema.tables)
 ORDER BY sh.name+'.'+o.name,s.column_id
 ```
 
-**Use =instead of AS for column aliases**
+**Float and real datatypes**
+----------
+Why we should not use float and real datatypes to store money in SQL Server?
+The main problem with them is that they are approximate **numerics**, so they don’t store exact values.
+
+Take a look at this:
+
+![image2017-6-29 10-35-6](https://user-images.githubusercontent.com/7675114/30134194-e3d096b8-931b-11e7-877c-1c444a146285.png)
+
+> The **float** and **real** data types are known as approximate data types. The behavior of float and real follows the IEEE 754 specification on approximate numeric data types.
+Approximate numeric data types do not store the exact values specified for many numbers; they store an extremely close approximation of the value. For many applications, the tiny difference between the specified value and the stored approximation is not noticeable. 
+At times, though, the difference becomes noticeable. Because of the approximate nature of the float and real data types, do not use these data types when exact numeric behavior is required, such as in financial applications, in operations involving rounding, or in equality checks. Instead, use the integer, decimal, money, or smallmoney data types.
+
+**Decimal** is always a better choice even compared to **money** datatype, where we might have issues in cases of division.
+
+![image2017-6-29 10-35-47](https://user-images.githubusercontent.com/7675114/30134255-2253853a-931c-11e7-8ad4-2e129a90e056.png)
+
+
+**Use = instead of AS for column aliases**
 ----------
 
 There is no performance difference between both of them. But, which is easier to ready? 
