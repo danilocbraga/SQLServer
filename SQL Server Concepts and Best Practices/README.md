@@ -47,6 +47,24 @@ It is worth highlighting the importance to keep your code (variables) using the 
 
 Probably anybody will assume that columns with the same name in different tables have the same data type. As a result, they won’t verify data types. Different types is an accident waiting to happen.
 
+Check that before creating a new column with the same name:
+```SQL
+SELECT sh.name+'.'+o.name AS ObjectName,
+s.name as ColumnName,
+CASE WHEN t.name IN ('char','varchar') THEN t.name+'('+CASE WHEN s.max_length<0 then 'MAX' ELSE CONVERT(varchar(10),s.max_length) END+')'
+WHEN t.name IN ('nvarchar','nchar') THEN t.name+'('+CASE WHEN s.max_length<0 then 'MAX' ELSE CONVERT(varchar(10),s.max_length/2) END+')'
+WHEN t.name IN ('numeric') THEN t.name+'('+CONVERT(varchar(10),s.precision)+','+CONVERT(varchar(10),s.scale)+')'
+ELSE t.name END AS DataType
+,CASE WHEN s.is_nullable=1 THEN 'NULL' ELSE 'NOT NULL' END AS Nullable     
+FROM sys.columns s
+INNER JOIN sys.types t ON s.system_type_id=t.user_type_id and t.is_user_defined=0
+INNER JOIN sys.objects o ON s.object_id=o.object_id
+INNER JOIN sys.schemas sh on o.schema_id=sh.schema_id
+WHERE O.name IN (select table_name from information_schema.tables)
+--AND s.name = 'NewColumn'
+ORDER BY sh.name+'.'+o.name,s.column_id
+```
+
 **Use =instead of AS for column aliases**
 ----------
 
