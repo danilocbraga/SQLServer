@@ -76,7 +76,7 @@ Take a look at this:
 
 > The **float** and **real** data types are known as approximate data types. The behavior of float and real follows the IEEE 754 specification on approximate numeric data types.
 Approximate numeric data types do not store the exact values specified for many numbers; they store an extremely close approximation of the value. For many applications, the tiny difference between the specified value and the stored approximation is not noticeable. 
-At times, though, the difference becomes noticeable. Because of the approximate nature of the float and real data types, do not use these data types when exact numeric behavior is required, such as in financial applications, in operations involving rounding, or in equality checks. Instead, use the integer, decimal, money, or smallmoney data types.
+At times, though, the difference becomes noticeable. Because of the approximate nature of the float and real data types, do not use these data types when exact numeric behavior is required, such as in financial applications, in operations involving rounding, or in equality checks. Instead, use the integer, decimal, money, or smallmoney data types. https://technet.microsoft.com/en-us/library/ms187912(v=sql.105).aspx
 
 **Decimal** is always a better choice even compared to **money** datatype, where we might have issues in cases of division.
 
