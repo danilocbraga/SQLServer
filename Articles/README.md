@@ -6,7 +6,9 @@
      - [SARGable functions in SQL Server](http://sqlblog.com/blogs/rob_farley/archive/2010/01/22/sargable-functions-in-sql-server.aspx)
      - [Dynamic Search Conditions in T-SQL](http://www.sommarskog.se/dynamic_sql.html)
      - [SQL Code Smells](https://www.red-gate.com/simple-talk/sql/t-sql-programming/sql-code-smells/)     
-     - [Why is My Database Application so Slow?](https://www.red-gate.com/simple-talk/dotnet/net-performance/database-application-slow/)        - [13 Things You Should Know About Statistics and the Query Optimizer](https://www.red-gate.com/simple-talk/sql/t-sql-programming/13-things-you-should-know-about-statistics-and-the-query-optimizer/)
+     - [Why is My Database Application so Slow?](https://www.red-gate.com/simple-talk/dotnet/net-performance/database-application-slow/)
+     
+     - [13 Things You Should Know About Statistics and the Query Optimizer](https://www.red-gate.com/simple-talk/sql/t-sql-programming/13-things-you-should-know-about-statistics-and-the-query-optimizer/)
      - [Fixing Cache Bloat Problems With Guide Plans and Forced Parameterization](https://www.red-gate.com/simple-talk/sql/performance/fixing-cache-bloat-problems-with-guide-plans-and-forced-parameterization/)
      - [When a Nonclustered Index and Statistics Make a Query Slower](https://sqlworkbooks.com/2017/05/when-a-nonclustered-index-and-statistics-make-a-query-slower/)
      - [Using Trace Flag 2453 to Improve Table Variable Performance](https://www.brentozar.com/archive/2017/02/using-trace-flag-2453-improve-table-variable-performance/)
