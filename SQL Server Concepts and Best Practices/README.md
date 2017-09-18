@@ -7,7 +7,7 @@ SQL Server Concepts and Best Practices
 
 When **there is a clustered index** on the table and the column to be queried, both the MAX() operator and the query SELECT TOP 1 will have almost identical performance.
 
-When **there is no clustered index (Heap)**  on the table and the column to be queried, the MAX() operator offers the better performance.So, consider using MAX rather than SELECT TOP 1.
+When **there is no clustered index (Heap)**  on the table and the column to be queried, the MAX() operator offers the better performance. So, consider using MAX rather than SELECT TOP 1.
 
 
 **CTE vs #temp table**
