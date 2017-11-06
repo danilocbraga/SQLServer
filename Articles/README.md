@@ -20,6 +20,7 @@
      - [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)
 
    - Miscellaneous
+     - [Microsoft SQL Server Licensing Simplified into 7 Rules](https://www.brentozar.com/archive/2015/04/microsoft-sql-server-licensing-simplified-into-7-rules/)
      - [Managing Temporal Table History in SQL Server 2016](https://www.mssqltips.com/sqlservertip/4674/managing-temporal-table-history-in-sql-server-2016/)
      - [Lipoaspiration in your SQL Server Database](https://www.red-gate.com/simple-talk/sql/performance/lipoaspiration-in-your-sql-server-database/)
      - [The SQL Hall of Shame](http://sqlblog.com/blogs/adam_machanic/archive/2017/06/14/the-sql-hall-of-shame.aspx)
