@@ -9,7 +9,7 @@ When **there is a clustered index** on the table and the column to be queried, b
 
 When **there is no clustered index (Heap)**  on the table and the column to be queried, the MAX() operator offers the better performance. So, consider using MAX rather than SELECT TOP 1.
 
-**Subquery using Exists 1 or Exists **
+**Subquery using Exists 1 or Exists**
 ----------
 
 It doesn't make any difference. SQL Server is smart and knows it's being used for an EXISTS, and returns NO DATA to the system.
