@@ -9,6 +9,24 @@ When **there is a clustered index** on the table and the column to be queried, b
 
 When **there is no clustered index (Heap)**  on the table and the column to be queried, the MAX() operator offers the better performance. So, consider using MAX rather than SELECT TOP 1.
 
+**Subquery using Exists 1 or Exists **
+----------
+
+It doesn't make any difference. SQL Server is smart and knows it's being used for an EXISTS, and returns NO DATA to the system.
+Quoth Microsoft: http://technet.microsoft.com/en-us/library/ms189259.aspx?ppud=4
+
+The select list of a subquery introduced by EXISTS almost always consists of an asterisk (*). There is no reason to list column names because you are just testing whether rows that meet the conditions specified in the subquery exist.
+Also, don't believe me? Try running the following:
+
+```SQL
+SELECT whatever
+  FROM yourtable
+ WHERE EXISTS( SELECT 1/0
+                 FROM someothertable 
+                WHERE a_valid_clause )
+```		
+If it was actually doing something with the SELECT list, it would throw a div by zero error. It doesn't.
+
 
 **CTE vs #temp table**
 ---------
