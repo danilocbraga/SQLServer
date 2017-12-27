@@ -19,6 +19,8 @@ DBCC TRACEON ( 8075 , -1);
 -- FIX: Out of memory error when the virtual address space of the SQL Server process is very low on available memory
 DBCC TRACEON(2371,-1)
 -- Lowers the threshold for automatic statistics updates to occur based on table size. Good for VLDBs.
+DBCC TRACEON(2340, -1)
+-- Lowers large memory grant requests from optimized Nested Loops
 GO
  
 EXEC sp_procoption N'[dbo].[EnableTraceFlags]', 'startup', '1'
