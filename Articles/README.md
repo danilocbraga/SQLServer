@@ -11,7 +11,8 @@
      - [Fixing Cache Bloat Problems With Guide Plans and Forced Parameterization](https://www.red-gate.com/simple-talk/sql/performance/fixing-cache-bloat-problems-with-guide-plans-and-forced-parameterization/)
      - [When a Nonclustered Index and Statistics Make a Query Slower](https://sqlworkbooks.com/2017/05/when-a-nonclustered-index-and-statistics-make-a-query-slower/)
      - [Using Trace Flag 2453 to Improve Table Variable Performance](https://www.brentozar.com/archive/2017/02/using-trace-flag-2453-improve-table-variable-performance/)
-
+     - [Using Optimizer_WhatIF and StatsStream to Simulate a Production Environment](https://www.red-gate.com/simple-talk/sql/database-administration/using-optimizer_whatif-and-statsstream-to-simulate-a-production-environment/)
+     
    - Storage Performance
      - [Using Microsoft DiskSpd to Test Your Storage Subsystem](https://sqlperformance.com/2015/08/io-subsystem/diskspd-test-storage)
      - [Analyzing I/O Performance for SQL Server (CrystalDiskMark)](https://sqlperformance.com/2015/05/io-subsystem/analyzing-io-performance-for-sql-server)
