@@ -27,3 +27,4 @@
      - [The SQL Hall of Shame](http://sqlblog.com/blogs/adam_machanic/archive/2017/06/14/the-sql-hall-of-shame.aspx)
      - [SQL Server Index Design Guide](https://technet.microsoft.com/en-us/library/jj835095.aspx)
      - [The Curse and Blessings of Dynamic SQL](http://sommarskog.se/dyn-search.html)
+     - [When to use row or page compression in SQL Server](https://thomaslarock.com/2018/01/when-to-use-row-or-page-compression-in-sql-server/)     
