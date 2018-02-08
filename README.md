@@ -39,6 +39,7 @@ Repo for SQL Server scripts. These are targeted to both SQL DBAs and database de
 - [Apex SQL Refactor](https://www.apexsql.com/Download.aspx?download=Refactor) - Format SQL with over 160 options
 - [ApexSQL Complete](http://www.apexsql.com/sql_tools_complete.aspx) - Automatically complete SQL statements
 - [SQLQueryStress](https://github.com/ErikEJ/SqlQueryStress) - Query stress simulator
+- [Statistics Parser](http://statisticsparser.com/) - Read SQL Server ouput from Statistics IO
 
 - [dbatools](https://dbatools.io/download) - dbatools is a PowerShell module with over 200 SQL Server administration and migration commands included
 - [Diskspd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) - Storage Testing Tool 
