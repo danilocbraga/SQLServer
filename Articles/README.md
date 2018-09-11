@@ -20,6 +20,9 @@
    - AlwaysOn
      - [How to create multiple listeners for same availability group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)
 
+   - Development
+     - [Defensive Error Handling](https://www.red-gate.com/simple-talk/sql/t-sql-programming/defensive-error-handling/)
+
    - Miscellaneous
      - [Microsoft SQL Server Licensing Simplified into 7 Rules](https://www.brentozar.com/archive/2015/04/microsoft-sql-server-licensing-simplified-into-7-rules/)
      - [Managing Temporal Table History in SQL Server 2016](https://www.mssqltips.com/sqlservertip/4674/managing-temporal-table-history-in-sql-server-2016/)
