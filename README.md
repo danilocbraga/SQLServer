@@ -33,6 +33,22 @@ Repo for SQL Server scripts. These are targeted to both SQL DBAs and database de
      - [Troubleshooting SQL Server: A Guide for the Accidental DBA](http://assets.red-gate.com/products/dba/assets/Accidental_DBA_EBook.zip) (by Jonathan Kehayias and Ted Krueger )
      - [SQL Server Hardware](http://assets.red-gate.com/community/books/sql-server-hardware-ebook.pdf) (by Glen Berry)
 
+## Web Resources
+  - Security
+     - [SQLMap](http://sqlmap.org/) – The tool for mounting SQL injection attacks tests against a running site)
+
+  - Free Videos
+     - [SQLbits](https://sqlbits.com/)
+     - [BrentOzar](https://www.youtube.com/user/BrentOzar/videos/)
+     - [SQLPASSTV](https://www.youtube.com/user/SQLPASSTV/videos/)
+ 
+  - Database Podcasts
+     - [SQLServerRadio](http://www.sqlserverradio.com/) - (by Guy Glantser and Matan Yungman)
+     - [People Talking Tech](http://peopletalkingtech.com/) - (by Denny Cherry)
+     - [Midnight DBA](http://midnightdba.itbookworm.com/Show) - (by Sean and Jen McCown)
+     - [Dear SQL DBA](https://www.littlekendra.com/dearsqldba/) - (by Kendra Little)
+     - [SQL Down Under Podcast](https://www.sqldownunder.com/) - (by Greg Low)
+ 
 ## Free Tools:
 - [SQL Code Guard](http://sqlcodeguard.com/) - SQL Code Guard provides fast and comprehensive static analysis of T-SQL code
 - [SQL Search](http://www.red-gate.com/products/sql-development/sql-search/) - Find fragments of SQL in tables, views, stored procedures, functions and views
